@@ -4,19 +4,16 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
     './src/**/*.{js,ts,jsx,tsx}',
   ],
-  darkMode: 'class',
+  // darkMode: 'class',
+  darkMode: 'light',
   theme: {
     extend: {
-      animation: {
-        hero: 'hero 9s infinite',
+      screens: {
+        'mobile-hover': { raw: '(hover: hover)' },
       },
-      keyframes: {
-        hero: {
-          '0%': { transform: 'translate(0px, 0px) scale(1)' },
-          '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
-          '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
-          '100%': { transform: 'translate(0px, 0px) scale(1)' },
-        },
+
+      backgroundImage: {
+        hero: "url('/backgrounds/31.png')",
       },
     },
   },

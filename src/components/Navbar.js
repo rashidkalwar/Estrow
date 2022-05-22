@@ -1,6 +1,5 @@
 import { Fragment } from 'react';
 import { Popover, Transition } from '@headlessui/react';
-import ThemeToggler from 'src/theme/ThemeToggler';
 import Link from 'next/link';
 import {
   ChartBarIcon,
@@ -63,12 +62,17 @@ export default function MainNavbar() {
             <div className="flex justify-start lg:w-0 lg:flex-1">
               <Link className="cursor-pointer" href="/">
                 <a>
-                  <Logo className="sr-only" height="60" width="120" />
+                  <Logo
+                    className="sr-only"
+                    fill="#0c4a6e"
+                    height="60"
+                    width="120"
+                  />
                 </a>
               </Link>
             </div>
             <div className="-mr-2 -my-2 md:hidden">
-              <Popover.Button className="bg-white dark:bg-black  rounded-md p-2 inline-flex items-center justify-center text-gray-400 border-2 border-blue-500 hover:text-gray-500 hover:bg-gray-100 ">
+              <Popover.Button className="bg-white bg-opacity-25 rounded-lg p-2 inline-flex items-center justify-center text-sky-800 filter backdrop-blur-md border-2 border-sky-800 hover:text-sky-800 hover:bg-gray-100  ">
                 <span className="sr-only">Open menu</span>
                 <MenuIcon className="h-6 w-6" aria-hidden="true" />
               </Popover.Button>
@@ -122,12 +126,12 @@ export default function MainNavbar() {
                     >
                       <Popover.Panel className="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
                         <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                          <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                          <div className="relative grid gap-6 bg-white bg-opacity-70 rounded-xl filter backdrop-blur-md px-5 py-6 sm:gap-8 sm:p-8">
                             {solutions.map((item) => (
                               <Link href={item.href} key={item.name}>
-                                <a className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
+                                <a className="-m-3 p-3 flex items-start rounded-lg hover:bg-opacity-80 hover:backdrop-blur-sm">
                                   <item.icon
-                                    className="flex-shrink-0 h-6 w-6 text-blue-600"
+                                    className="flex-shrink-0 h-6 w-6 text-sky-500"
                                     aria-hidden="true"
                                   />
                                   <div className="ml-4">
@@ -187,20 +191,19 @@ export default function MainNavbar() {
         >
           <Popover.Panel
             focus
-            className="absolute top-0 z-20 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+            className="flex justify-end absolute top-0 z-20 inset-x-0 p-2 transition duration-200 transform origin-top-right md:hidden"
           >
-            <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 dark:bg-slate-800 bg-white divide-y-2 divide-gray-50">
+            <div className="rounded-xl w-3/4 shadow-lg ring-1 ring-black ring-opacity-5 bg-white bg-opacity-70 filter backdrop-blur-md divide-y-2 divide-sky-200">
               <div className="pt-5 pb-6 px-5">
                 <div className="flex items-center justify-between">
                   <div>
-                    <Logo height="75" width="120" />
+                    <Logo height="80" fill="#0ea5e9" width="120" />
                   </div>
                   <div className="-mr-2 flex items-center">
-                    <ThemeToggler className="mr-6" />
-                    <Popover.Button className="bg-blue-100 rounded-lg dark:bg-slate-900 p-2 inline-flex items-center justify-center text-gray-400 dark:text-blue-300 ring-blue-400 hover:ring-2 dark:hover:text-blue-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+                    <Popover.Button className="bg-white rounded-lg dark:bg-slate-900 p-2 inline-flex items-center justify-center text-gray-400 hover:opacity-50 tarnsition duration-200 ">
                       <span className="sr-only">Close menu</span>
                       <XIcon
-                        className="h-6 w-6 text-blue-500 dark:text-blue-400"
+                        className="h-6 w-6 text-sky-500"
                         aria-hidden="true"
                       />
                     </Popover.Button>
@@ -210,12 +213,12 @@ export default function MainNavbar() {
                   <nav className="grid gap-y-8">
                     {solutions.map((item) => (
                       <Link href={item.href} key={item.name}>
-                        <a className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 dark:hover:bg-slate-900">
+                        <a className="-m-3 p-3 flex justify-center items-center rounded-md hover:bg-gray-50 mobile-hover:active:bg-gray-50 tarnsition duration-150">
                           <item.icon
-                            className="flex-shrink-0 h-6 w-6 text-blue-600 dark:text-blue-400"
+                            className="flex-shrink-0 h-6 w-6 text-sky-500"
                             aria-hidden="true"
                           />
-                          <span className="ml-3 text-base font-medium text-gray-900 dark:text-slate-50">
+                          <span className="ml-3 text-lg font-medium text-gray-900">
                             {item.name}
                           </span>
                         </a>
@@ -225,7 +228,7 @@ export default function MainNavbar() {
                 </div>
               </div>
               <div className="py-6 px-5 space-y-6">
-                <div className="grid grid-cols-2 gap-y-4 gap-x-8">
+                {/* <div className="grid grid-cols-2 gap-y-4 gap-x-8">
                   <Link
                     href="#"
                     className="text-base font-medium text-gray-900 hover:text-gray-700 dark:text-slate-50 dark:hover:text-gray-400"
@@ -251,8 +254,9 @@ export default function MainNavbar() {
                   >
                     Help Center
                   </Link>
-                </div>
-                <div className="flex flex-col justify-center items-center">
+                </div> */}
+                {/* <div className="flex flex-col justify-center items-center"> */}
+                <div className="flex justify-center items-center">
                   {/* {isAuthenticated ? (
                     <button
                       type="button"
@@ -270,7 +274,7 @@ export default function MainNavbar() {
                   ) : ( */}
                   <>
                     <Link href="/register">
-                      <a className="whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-xl shadow-sm text-base font-medium text-white bg-blue-500 hover:bg-blue-600">
+                      <a className="whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border rounded-2xl shadow-sm text-base font-medium text-white bg-gradient-to-r from-sky-400 via-cyan-500 to-pink-300 mobile-hover:hover:opacity-75 hover:opacity-75">
                         Get Started
                         <ChevronRightIcon
                           className={classNames(
@@ -280,14 +284,14 @@ export default function MainNavbar() {
                         />
                       </a>
                     </Link>
-                    <p className="mt-6 text-center text-base font-medium text-gray-500 dark:text-slate-50">
+                    {/* <p className="mt-6 text-center text-base font-medium text-gray-500 dark:text-slate-50">
                       Existing user?{' '}
                       <Link href="/login">
                         <a className="text-blue-600 hover:text-blue-500">
                           Sign in
                         </a>
                       </Link>
-                    </p>
+                    </p> */}
                   </>
                   {/* )} */}
                 </div>
