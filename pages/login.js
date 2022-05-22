@@ -40,12 +40,12 @@ export default function LoginPage() {
       <div className="bg-[url('/backgrounds/31.png')] h-screen bg-center ">
         <MainNavbar />
         <main>
-          <div class="h-full w-full py-10 px-4">
-            <div class="flex flex-col items-center justify-center">
-              <div class="bg-white bg-opacity-60 filter backdrop-blur-md shadow rounded-2xl lg:w-1/3  md:w-1/2 w-full py-10 px-14 mt-16">
+          <div className="h-full w-full py-10 px-4">
+            <div className="flex flex-col items-center justify-center">
+              <div className="bg-white bg-opacity-60 filter backdrop-blur-md shadow rounded-2xl md:w-2/4 lg:w-2/5 xl:2/5 2xl:w-1/4 w-5/6 w- py-10 px-14 mt-16">
                 <p
-                  tabindex="0"
-                  class="focus:outline-none text-2xl font-extrabold leading-6 text-center text-gray-800"
+                  tabIndex="0"
+                  className="focus:outline-none text-2xl font-extrabold leading-6 text-center text-gray-800"
                 >
                   Login to your account
                 </p>
@@ -53,7 +53,7 @@ export default function LoginPage() {
                 <button
                   aria-label="Continue with google"
                   role="button"
-                  class="py-3.5 px-4 border-2 rounded-full border-blue-400 hover:border-opacity-50 flex justify-center items-center w-full mt-8"
+                  className="group py-3.5 px-4 border-2 rounded-full border-gray-400 hover:border-blue-400 flex justify-center items-center w-full mt-8 transition duration-200"
                 >
                   <svg
                     width="19"
@@ -79,14 +79,14 @@ export default function LoginPage() {
                       fill="#EB4335"
                     />
                   </svg>
-                  <p class="text-base font-medium ml-4 text-gray-700">
+                  <p className="group text-base font-semibold ml-4 text-gray-700 group-hover:text-blue-600">
                     Continue with Google
                   </p>
                 </button>
                 {/* <button
                   aria-label="Continue with github"
                   role="button"
-                  class="focus:outline-none  focus:ring-2 focus:ring-offset-1 focus:ring-gray-700 py-3.5 px-4 border rounded-lg border-gray-700 flex items-center w-full mt-4"
+                  className="focus:outline-none  focus:ring-2 focus:ring-offset-1 focus:ring-gray-700 py-3.5 px-4 border rounded-lg border-gray-700 flex items-center w-full mt-4"
                 >
                   <svg
                     width="21"
@@ -101,14 +101,14 @@ export default function LoginPage() {
                     />
                   </svg>
 
-                  <p class="text-base font-medium ml-4 text-gray-700">
+                  <p className="text-base font-medium ml-4 text-gray-700">
                     Continue with Github
                   </p>
                 </button> */}
                 <button
                   aria-label="Continue with twitter"
                   role="button"
-                  class="py-3.5 px-4 border-2 rounded-full border-blue-400 hover:border-opacity-50 flex justify-center items-center w-full mt-4"
+                  className="group py-3.5 px-4 border-2 rounded-full border-gray-400 hover:border-blue-400 flex justify-center items-center w-full mt-4 transition duration-200"
                 >
                   <svg
                     width="24"
@@ -123,42 +123,42 @@ export default function LoginPage() {
                     />
                   </svg>
 
-                  <p class="text-base font-medium ml-4 text-gray-700">
+                  <p className="text-base font-semibold ml-4 text-gray-700 group-hover:text-blue-600">
                     Continue with Twitter
                   </p>
                 </button>
-                <div class="relative flex py-5 items-center">
-                  <div class="flex-grow border-t border-slate-700"></div>
-                  <span class="flex-shrink mx-4 text-slate-700">OR</span>
-                  <div class="flex-grow border-t border-slate-700"></div>
+                <div className="relative flex py-5 items-center">
+                  <div className="flex-grow border-t border-slate-700"></div>
+                  <span className="flex-shrink mx-4 text-slate-700">OR</span>
+                  <div className="flex-grow border-t border-slate-700"></div>
                 </div>
                 {/* <div>
                   <label
                     id="email"
-                    class="text-sm font-medium leading-none text-gray-800"
+                    className="text-sm font-medium leading-none text-gray-800"
                   >
                     Email
                   </label>
                   <input
                     aria-labelledby="email"
                     type="email"
-                    class="bg-white border rounded-lg text-sm font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-1"
+                    className="bg-white border rounded-lg text-sm font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-1"
                   />
                 </div>
-                <div class="mt-6  w-full">
+                <div className="mt-6  w-full">
                   <label
                     for="pass"
-                    class="text-sm font-medium leading-none text-gray-800"
+                    className="text-sm font-medium leading-none text-gray-800"
                   >
                     Password
                   </label>
-                  <div class="relative flex items-center justify-center">
+                  <div className="relative flex items-center justify-center">
                     <input
                       id="pass"
                       type="password"
-                      class="bg-white border rounded-lg text-sm font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-1"
+                      className="bg-white border rounded-lg text-sm font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-1"
                     />
-                    <div class="absolute right-0 mt-2 mr-3 cursor-pointer">
+                    <div className="absolute right-0 mt-2 mr-3 cursor-pointer">
                       <svg
                         width="16"
                         height="16"
@@ -207,22 +207,22 @@ export default function LoginPage() {
                     // onChange={onChange}
                   />
                 </div>
-                <div class="mt-8">
+                <div className="mt-8">
                   <button
                     role="button"
-                    class="focus:ring-2 focus:ring-offset-2 focus:ring-black text-md font-semibold leading-none text-sky-800 focus:outline-none bg-gradient-to-r from-sky-400 hover:from-sky-500 to-cyan-400 hover:to-cyan-500 border rounded-full py-4 w-full"
+                    className="focus:ring-2 focus:ring-offset-2 focus:ring-black text-md font-semibold leading-none text-white drop-shadow-md shadow-sky-400 focus:outline-none bg-gradient-to-r from-sky-500 to-pink-300 hover:opacity-80 border-none rounded-full py-4 w-full transition duration-200"
                   >
                     Create my account
                   </button>
                 </div>
                 <p
-                  tabindex="0"
-                  class="focus:outline-none text-sm mt-4 font-medium leading-none text-center text-gray-500"
+                  tabIndex="0"
+                  className="focus:outline-none text-sm mt-4 font-medium leading-none text-center text-gray-500"
                 >
                   Dont have account?{' '}
                   <a
-                    href="javascript:void(0)"
-                    class="hover:text-gray-500 focus:text-gray-500 focus:outline-none focus:underline hover:underline text-sm font-medium leading-none  text-gray-800 cursor-pointer"
+                    href="#"
+                    className="hover:text-gray-500 focus:text-gray-500 focus:outline-none focus:underline hover:underline text-sm font-medium leading-none  text-gray-800 cursor-pointer"
                   >
                     {' '}
                     Sign up here
