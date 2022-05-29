@@ -8,10 +8,6 @@ module.exports = {
   darkMode: 'light',
   theme: {
     extend: {
-      screens: {
-        'mobile-hover': { raw: '(hover: hover)' },
-      },
-
       backgroundImage: {
         hero: "url('/backgrounds/31.png')",
       },

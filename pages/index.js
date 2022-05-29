@@ -1,8 +1,7 @@
 import * as React from 'react';
 import Head from 'next/head';
 
-import MainNavbar from 'src/components/Navbar';
-import HomePageSvg from 'src/svgs/homePageSVG';
+import MainNavbar from '../src/components/Navbar';
 
 export default function Home() {
   return (
@@ -20,7 +19,7 @@ export default function Home() {
                 <span className="text-slate-800 dark:text-white">
                   We are here to make your business look good
                 </span>{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-br from-blue-500 via-cyan-500 to-pink-400">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-500  to-pink-400">
                   online.
                 </span>
               </h1>

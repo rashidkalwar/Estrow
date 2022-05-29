@@ -9,12 +9,23 @@ import {
   ShieldCheckIcon,
   ViewGridIcon,
   XIcon,
+  HomeIcon,
+  LogoutIcon,
 } from '@heroicons/react/outline';
 import { ChevronDownIcon, ChevronRightIcon } from '@heroicons/react/solid';
 
-import Logo from 'src/svgs/logo';
+import Logo from '../svgs/logo';
+import UserDropdownMenu from './UserDropdownMenu';
+import { UserAuth } from 'src/firebase/context/AuthContext';
 
 const solutions = [
+  {
+    name: 'Home',
+    description:
+      'Get a better understanding of where your traffic is coming from.',
+    href: '/',
+    icon: HomeIcon,
+  },
   {
     name: 'Analytics',
     description:
@@ -54,6 +65,7 @@ function classNames(...classes) {
 }
 
 export default function MainNavbar() {
+  const { user, logout } = UserAuth();
   return (
     <header>
       <Popover className="relative bg-transparent">
@@ -154,28 +166,28 @@ export default function MainNavbar() {
               </Popover>
             </Popover.Group>
             <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-              {/* {isAuthenticated ? (
-                <UserNavMenu />
-              ) : ( */}
-              <>
-                <Link href="/login">
-                  <a className="whitespace-nowrap bg-white bg-opacity-40 hover:bg-opacity-80 transition duration-700 py-1 px-4 rounded-full text-base font-medium text-sky-600">
-                    Sign in
-                  </a>
-                </Link>
-                <Link href="/register">
-                  <a className="ml-5 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 bg-white bg-opacity-80 hover:bg-opacity-60 transition duration-700 rounded-full text-base font-medium text-sky-600">
-                    Get Started
-                    <ChevronRightIcon
-                      className={classNames(
-                        'text-sky-600 h-5 w-5 group-hover:text-gray-500 '
-                      )}
-                      aria-hidden="true"
-                    />
-                  </a>
-                </Link>
-              </>
-              {/* )} */}
+              {user ? (
+                <UserDropdownMenu user={user} logout={logout} />
+              ) : (
+                <>
+                  <Link href="/login">
+                    <a className="whitespace-nowrap bg-white bg-opacity-40 hover:bg-opacity-80 transition duration-700 py-1 px-4 rounded-full text-base font-medium text-sky-600">
+                      Sign in
+                    </a>
+                  </Link>
+                  <Link href="/register">
+                    <a className="ml-5 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 bg-white bg-opacity-80 hover:bg-opacity-60 transition duration-700 rounded-full text-base font-medium text-sky-600">
+                      Get Started
+                      <ChevronRightIcon
+                        className={classNames(
+                          'text-sky-600 h-5 w-5 group-hover:text-gray-500 '
+                        )}
+                        aria-hidden="true"
+                      />
+                    </a>
+                  </Link>
+                </>
+              )}
             </div>
           </div>
         </div>
@@ -257,11 +269,11 @@ export default function MainNavbar() {
                 </div> */}
                 {/* <div className="flex flex-col justify-center items-center"> */}
                 <div className="flex justify-center items-center">
-                  {/* {isAuthenticated ? (
+                  {user ? (
                     <button
                       type="button"
-                      onClick={logoutHandler}
-                      class="whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-xl shadow-sm text-base font-medium text-white bg-blue-500 hover:bg-blue-600"
+                      onClick={logout}
+                      class="whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-xl shadow-sm text-base font-medium text-white bg-sky-500 hover:bg-sky-600"
                     >
                       <LogoutIcon
                         className={classNames(
@@ -271,29 +283,29 @@ export default function MainNavbar() {
                       />
                       Logout
                     </button>
-                  ) : ( */}
-                  <>
-                    <Link href="/register">
-                      <a className="whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border rounded-2xl shadow-sm text-base font-medium text-white bg-gradient-to-r from-sky-400 via-cyan-500 to-pink-300 mobile-hover:hover:opacity-75 hover:opacity-75">
-                        Get Started
-                        <ChevronRightIcon
-                          className={classNames(
-                            'text-white ml-1 h-5 w-5 group-hover:text-gray-500 '
-                          )}
-                          aria-hidden="true"
-                        />
-                      </a>
-                    </Link>
-                    {/* <p className="mt-6 text-center text-base font-medium text-gray-500 dark:text-slate-50">
-                      Existing user?{' '}
-                      <Link href="/login">
-                        <a className="text-blue-600 hover:text-blue-500">
-                          Sign in
+                  ) : (
+                    <div className="flex-col">
+                      <Link href="/register">
+                        <a className="whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border rounded-2xl shadow-sm text-base font-medium text-white bg-gradient-to-r from-sky-400 via-cyan-500 to-pink-300 mobile-hover:hover:opacity-75 hover:opacity-75">
+                          Get Started
+                          <ChevronRightIcon
+                            className={classNames(
+                              'text-white ml-1 h-5 w-5 group-hover:text-gray-500 '
+                            )}
+                            aria-hidden="true"
+                          />
                         </a>
                       </Link>
-                    </p> */}
-                  </>
-                  {/* )} */}
+                      <p className="mt-6 text-center text-base font-medium text-gray-500 dark:text-slate-50">
+                        Existing user?{' '}
+                        <Link href="/login">
+                          <a className="text-sky-600 hover:text-sky-500">
+                            Sign in
+                          </a>
+                        </Link>
+                      </p>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
