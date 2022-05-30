@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Head from 'next/head';
 import toast, { Toaster } from 'react-hot-toast';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 import MainNavbar from '../src/components/Navbar';
 import { UserAuth } from 'src/firebase/context/AuthContext';
@@ -181,13 +182,12 @@ export default function LoginPage() {
                     className="focus:outline-none text-sm mt-4 font-medium leading-none text-center text-gray-500"
                   >
                     Don't have account?
-                    <a
-                      href="#"
-                      className="hover:text-gray-500 focus:text-gray-500 focus:outline-none focus:underline hover:underline text-sm font-medium leading-none  text-gray-800 cursor-pointer"
-                    >
-                      {' '}
-                      Sign up here
-                    </a>
+                    <Link href="/register">
+                      <a className="hover:text-gray-500 focus:text-gray-500 focus:outline-none focus:underline hover:underline text-sm font-medium leading-none  text-gray-800 cursor-pointer">
+                        {' '}
+                        Sign up here
+                      </a>
+                    </Link>
                   </p>
                 </form>
               </div>

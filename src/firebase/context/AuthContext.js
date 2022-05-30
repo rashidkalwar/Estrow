@@ -54,6 +54,7 @@ export const AuthContextProvider = ({ children }) => {
         router.push('/');
       })
       .catch((error) => {
+        console.log(error.message);
         toast(error.message.slice(9), {
           icon: '⛔️',
         });

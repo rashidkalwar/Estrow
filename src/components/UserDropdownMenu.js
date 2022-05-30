@@ -1,5 +1,6 @@
 import { Menu, Transition } from '@headlessui/react';
 import { Fragment } from 'react';
+import Link from 'next/link';
 import { UserIcon } from '@heroicons/react/solid';
 import { LogoutIcon, DesktopComputerIcon } from '@heroicons/react/outline';
 
@@ -49,25 +50,28 @@ export default function UserDropdownMenu(props) {
             <div className="px-1 py-1">
               <Menu.Item>
                 {({ active }) => (
-                  <a
-                    href="/"
-                    className={`${
-                      active ? 'bg-sky-500 text-white' : 'text-gray-900'
-                    } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                  >
-                    {active ? (
-                      <DesktopComputerIcon
-                        className="mr-2 h-5 w-5 text-sky-400"
-                        aria-hidden="true"
-                      />
-                    ) : (
-                      <DesktopComputerIcon
-                        className="mr-2 h-5 w-5 text-sky-400"
-                        aria-hidden="true"
-                      />
-                    )}
-                    Dashboard
-                  </a>
+                  <div>
+                    <Link href="/">
+                      <a
+                        className={`${
+                          active ? 'bg-sky-500 text-white' : 'text-gray-900'
+                        } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                      >
+                        {active ? (
+                          <DesktopComputerIcon
+                            className="mr-2 h-5 w-5 text-sky-400"
+                            aria-hidden="true"
+                          />
+                        ) : (
+                          <DesktopComputerIcon
+                            className="mr-2 h-5 w-5 text-sky-400"
+                            aria-hidden="true"
+                          />
+                        )}
+                        Dashboard
+                      </a>
+                    </Link>
+                  </div>
                 )}
               </Menu.Item>
             </div>
