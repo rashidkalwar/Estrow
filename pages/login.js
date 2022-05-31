@@ -183,7 +183,10 @@ export default function LoginPage() {
                   >
                     Don't have account?
                     <Link href="/register">
-                      <a className="hover:text-gray-500 focus:text-gray-500 focus:outline-none focus:underline hover:underline text-sm font-medium leading-none  text-gray-800 cursor-pointer">
+                      <a
+                        rel="noopener"
+                        className="hover:text-gray-500 focus:text-gray-500 focus:outline-none focus:underline hover:underline text-sm font-medium leading-none  text-gray-800 cursor-pointer"
+                      >
                         {' '}
                         Sign up here
                       </a>

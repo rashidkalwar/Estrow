@@ -73,7 +73,7 @@ export default function MainNavbar() {
           <div className="flex justify-between items-center px-3 py-1 md:justify-start md:space-x-10">
             <div className="flex justify-start lg:w-0 lg:flex-1">
               <Link className="cursor-pointer" href="/">
-                <a>
+                <a rel="noopener">
                   <Logo
                     className="sr-only"
                     fill="#0c4a6e"
@@ -94,17 +94,26 @@ export default function MainNavbar() {
               className="hidden md:flex lg:space-x-6 space-x-1"
             >
               <Link href="/">
-                <a className="flex bg-white bg-opacity-40 hover:bg-opacity-80 transition duration-700 py-1 px-4 rounded-full text-base font-medium text-sky-600">
+                <a
+                  rel="noopener"
+                  className="flex bg-white bg-opacity-40 hover:bg-opacity-80 transition duration-700 py-1 px-4 rounded-full text-base font-medium text-sky-600"
+                >
                   Home
                 </a>
               </Link>
               <Link href="#">
-                <a className="flex bg-white bg-opacity-40 hover:bg-opacity-80 transition duration-700 py-1 px-4 rounded-full text-base font-medium text-sky-600">
+                <a
+                  rel="noopener"
+                  className="flex bg-white bg-opacity-40 hover:bg-opacity-80 transition duration-700 py-1 px-4 rounded-full text-base font-medium text-sky-600"
+                >
                   About us
                 </a>
               </Link>
               <Link href="#">
-                <a className="flex bg-white bg-opacity-40 hover:bg-opacity-80 transition duration-700 py-1 px-4 rounded-full text-base font-medium text-sky-600">
+                <a
+                  rel="noopener"
+                  className="flex bg-white bg-opacity-40 hover:bg-opacity-80 transition duration-700 py-1 px-4 rounded-full text-base font-medium text-sky-600"
+                >
                   Blog
                 </a>
               </Link>
@@ -141,7 +150,10 @@ export default function MainNavbar() {
                           <div className="relative grid gap-6 bg-white bg-opacity-70 rounded-xl filter backdrop-blur-md px-5 py-6 sm:gap-8 sm:p-8">
                             {solutions.map((item) => (
                               <Link href={item.href} key={item.name}>
-                                <a className="-m-3 p-3 flex items-start rounded-lg hover:bg-opacity-80 hover:backdrop-blur-sm">
+                                <a
+                                  rel="noopener"
+                                  className="-m-3 p-3 flex items-start rounded-lg hover:bg-opacity-80 hover:backdrop-blur-sm"
+                                >
                                   <item.icon
                                     className="flex-shrink-0 h-6 w-6 text-sky-500"
                                     aria-hidden="true"
@@ -171,12 +183,18 @@ export default function MainNavbar() {
               ) : (
                 <>
                   <Link href="/login">
-                    <a className="whitespace-nowrap bg-white bg-opacity-40 hover:bg-opacity-80 transition duration-700 py-1 px-4 rounded-full text-base font-medium text-sky-600">
+                    <a
+                      rel="noopener"
+                      className="whitespace-nowrap bg-white bg-opacity-40 hover:bg-opacity-80 transition duration-700 py-1 px-4 rounded-full text-base font-medium text-sky-600"
+                    >
                       Sign in
                     </a>
                   </Link>
                   <Link href="/register">
-                    <a className="ml-5 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 bg-white bg-opacity-80 hover:bg-opacity-60 transition duration-700 rounded-full text-base font-medium text-sky-600">
+                    <a
+                      rel="noopener"
+                      className="ml-5 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 bg-white bg-opacity-80 hover:bg-opacity-60 transition duration-700 rounded-full text-base font-medium text-sky-600"
+                    >
                       Get Started
                       <ChevronRightIcon
                         className={classNames(
@@ -225,7 +243,10 @@ export default function MainNavbar() {
                   <nav className="grid gap-y-8">
                     {solutions.map((item) => (
                       <Link href={item.href} key={item.name}>
-                        <a className="-m-3 p-3 flex justify-center items-center rounded-md hover:bg-gray-50 mobile-hover:active:bg-gray-50 tarnsition duration-150">
+                        <a
+                          rel="noopener"
+                          className="-m-3 p-3 flex justify-center items-center rounded-md hover:bg-gray-50 mobile-hover:active:bg-gray-50 tarnsition duration-150"
+                        >
                           <item.icon
                             className="flex-shrink-0 h-6 w-6 text-sky-500"
                             aria-hidden="true"
@@ -273,7 +294,7 @@ export default function MainNavbar() {
                     <button
                       type="button"
                       onClick={logout}
-                      class="whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-xl shadow-sm text-base font-medium text-white bg-sky-500 hover:bg-sky-600"
+                      className="whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-xl shadow-sm text-base font-medium text-white bg-sky-500 hover:bg-sky-600"
                     >
                       <LogoutIcon
                         className={classNames(
@@ -286,7 +307,10 @@ export default function MainNavbar() {
                   ) : (
                     <div className="flex-col">
                       <Link href="/register">
-                        <a className="whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border rounded-2xl shadow-sm text-base font-medium text-white bg-gradient-to-r from-sky-400 via-cyan-500 to-pink-300 mobile-hover:hover:opacity-75 hover:opacity-75">
+                        <a
+                          rel="noopener"
+                          className="whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border rounded-2xl shadow-sm text-base font-medium text-white bg-gradient-to-r from-sky-400 via-cyan-500 to-pink-300 mobile-hover:hover:opacity-75 hover:opacity-75"
+                        >
                           Get Started
                           <ChevronRightIcon
                             className={classNames(
@@ -299,7 +323,10 @@ export default function MainNavbar() {
                       <p className="mt-6 text-center text-base font-medium text-gray-500 dark:text-slate-50">
                         Existing user?{' '}
                         <Link href="/login">
-                          <a className="text-sky-600 hover:text-sky-500">
+                          <a
+                            rel="noopener"
+                            className="text-sky-600 hover:text-sky-500"
+                          >
                             Sign in
                           </a>
                         </Link>

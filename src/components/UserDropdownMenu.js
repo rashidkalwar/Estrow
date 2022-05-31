@@ -53,6 +53,7 @@ export default function UserDropdownMenu(props) {
                   <div>
                     <Link href="/">
                       <a
+                        rel="noopener"
                         className={`${
                           active ? 'bg-sky-500 text-white' : 'text-gray-900'
                         } group flex w-full items-center rounded-md px-2 py-2 text-sm`}

@@ -13,14 +13,22 @@ const MainFooter = () => {
               Find us on any of these platforms, we respond 1-2 business days.
             </h5>
             <div className="mt-6 flex w-24 justify-between">
-              <a href="https://www.twitter.com/RashidAliKalwar" target="_blank">
+              <a
+                rel="noopener"
+                href="https://www.twitter.com/RashidAliKalwar"
+                target="_blank"
+              >
                 {/* <Twitter className="font-xl p-1 bg-white text-blue-500  justify-center align-center rounded-full outline-none focus:outline-none text-center" /> */}
               </a>
-              <a href="https://www.facebook.com" target="_blank">
+              <a rel="noopener" href="https://www.facebook.com" target="_blank">
                 {/* <Facebook className="font-xl p-1 bg-white text-blue-500  justify-center align-center rounded-full outline-none focus:outline-none text-center" /> */}
               </a>
 
-              <a href="https://www.github.com/rashidkalwar" target="_blank">
+              <a
+                rel="noopener"
+                href="https://www.github.com/rashidkalwar"
+                target="_blank"
+              >
                 {/* <GitHub className="font-xl p-1 bg-white text-blue-500  justify-center align-center rounded-full outline-none focus:outline-none text-center" /> */}
               </a>
             </div>
@@ -37,14 +45,20 @@ const MainFooter = () => {
                 <ul className="list-unstyled">
                   <li>
                     <Link href="/about-us">
-                      <a className="text-slate-600 dark:text-slate-300 dark:hover:text-slate-400 hover:text-slate-800 font-semibold block pb-2 text-sm">
+                      <a
+                        rel="noopener"
+                        className="text-slate-600 dark:text-slate-300 dark:hover:text-slate-400 hover:text-slate-800 font-semibold block pb-2 text-sm"
+                      >
                         About Us
                       </a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/blog">
-                      <a className="text-slate-600 dark:text-slate-300 dark:hover:text-slate-400 hover:text-slate-800 font-semibold block pb-2 text-sm">
+                      <a
+                        rel="noopener"
+                        className="text-slate-600 dark:text-slate-300 dark:hover:text-slate-400 hover:text-slate-800 font-semibold block pb-2 text-sm"
+                      >
                         Blog
                       </a>
                     </Link>
