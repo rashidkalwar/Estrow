@@ -13,22 +13,14 @@ const MainFooter = () => {
               Find us on any of these platforms, we respond 1-2 business days.
             </h5>
             <div className="mt-6 flex w-24 justify-between">
-              <a
-                rel="noopener"
-                href="https://www.twitter.com/RashidAliKalwar"
-                target="_blank"
-              >
+              <a rel="noopener" href="https://www.twitter.com/RashidAliKalwar">
                 {/* <Twitter className="font-xl p-1 bg-white text-blue-500  justify-center align-center rounded-full outline-none focus:outline-none text-center" /> */}
               </a>
-              <a rel="noopener" href="https://www.facebook.com" target="_blank">
+              <a rel="noopener" href="https://www.facebook.com">
                 {/* <Facebook className="font-xl p-1 bg-white text-blue-500  justify-center align-center rounded-full outline-none focus:outline-none text-center" /> */}
               </a>
 
-              <a
-                rel="noopener"
-                href="https://www.github.com/rashidkalwar"
-                target="_blank"
-              >
+              <a rel="noopener" href="https://www.github.com/rashidkalwar">
                 {/* <GitHub className="font-xl p-1 bg-white text-blue-500  justify-center align-center rounded-full outline-none focus:outline-none text-center" /> */}
               </a>
             </div>
@@ -67,7 +59,6 @@ const MainFooter = () => {
                     <a
                       className="text-slate-600 dark:text-slate-300 dark:hover:text-slate-400 hover:text-slate-800 font-semibold block pb-2 text-sm"
                       href="https://www.github.com/creativetimofficial/tailwind-starter-kit"
-                      target="_blank"
                       rel="noopener"
                     >
                       Github
@@ -77,7 +68,6 @@ const MainFooter = () => {
                     <a
                       className="text-slate-600 dark:text-slate-300 dark:hover:text-slate-400 hover:text-slate-800 font-semibold block pb-2 text-sm"
                       href="https://www.creative-tim.com/bootstrap-themes/free"
-                      target="_blank"
                       rel="noopener"
                     >
                       Free Products
@@ -94,7 +84,6 @@ const MainFooter = () => {
                     <a
                       className="text-slate-600 dark:text-slate-300 dark:hover:text-slate-400 hover:text-slate-800 font-semibold block pb-2 text-sm"
                       href="https://github.com/creativetimofficial/tailwind-starter-kit/blob/master/LICENSE.md"
-                      target="_blank"
                       rel="noopener"
                     >
                       MIT License
@@ -104,7 +93,6 @@ const MainFooter = () => {
                     <a
                       className="text-slate-600 dark:text-slate-300 dark:hover:text-slate-400 hover:text-slate-800 font-semibold block pb-2 text-sm"
                       href="https://creative-tim.com/terms"
-                      target="_blank"
                       rel="noopener"
                     >
                       Terms &amp; Conditions
@@ -114,7 +102,6 @@ const MainFooter = () => {
                     <a
                       className="text-slate-600 dark:text-slate-300 dark:hover:text-slate-400 hover:text-slate-800 font-semibold block pb-2 text-sm"
                       href="https://creative-tim.com/privacy"
-                      target="_blank"
                       rel="noopener"
                     >
                       Privacy Policy
@@ -124,7 +111,6 @@ const MainFooter = () => {
                     <a
                       className="text-slate-600 dark:text-slate-300 dark:hover:text-slate-400 hover:text-slate-800 font-semibold block pb-2 text-sm"
                       href="https://creative-tim.com/contact-us"
-                      target="_blank"
                       rel="noopener"
                     >
                       Contact Us
