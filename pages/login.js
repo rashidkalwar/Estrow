@@ -181,7 +181,7 @@ export default function LoginPage() {
                     tabIndex="0"
                     className="focus:outline-none text-sm mt-4 font-medium leading-none text-center text-gray-500"
                   >
-                    Don't have account?
+                    Don&apos;t have account?
                     <Link href="/register">
                       <a
                         rel="noopener"

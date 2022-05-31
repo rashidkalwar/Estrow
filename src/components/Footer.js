@@ -68,6 +68,7 @@ const MainFooter = () => {
                       className="text-slate-600 dark:text-slate-300 dark:hover:text-slate-400 hover:text-slate-800 font-semibold block pb-2 text-sm"
                       href="https://www.github.com/creativetimofficial/tailwind-starter-kit"
                       target="_blank"
+                      rel="noopener"
                     >
                       Github
                     </a>
@@ -77,6 +78,7 @@ const MainFooter = () => {
                       className="text-slate-600 dark:text-slate-300 dark:hover:text-slate-400 hover:text-slate-800 font-semibold block pb-2 text-sm"
                       href="https://www.creative-tim.com/bootstrap-themes/free"
                       target="_blank"
+                      rel="noopener"
                     >
                       Free Products
                     </a>
@@ -93,6 +95,7 @@ const MainFooter = () => {
                       className="text-slate-600 dark:text-slate-300 dark:hover:text-slate-400 hover:text-slate-800 font-semibold block pb-2 text-sm"
                       href="https://github.com/creativetimofficial/tailwind-starter-kit/blob/master/LICENSE.md"
                       target="_blank"
+                      rel="noopener"
                     >
                       MIT License
                     </a>
@@ -102,6 +105,7 @@ const MainFooter = () => {
                       className="text-slate-600 dark:text-slate-300 dark:hover:text-slate-400 hover:text-slate-800 font-semibold block pb-2 text-sm"
                       href="https://creative-tim.com/terms"
                       target="_blank"
+                      rel="noopener"
                     >
                       Terms &amp; Conditions
                     </a>
@@ -111,6 +115,7 @@ const MainFooter = () => {
                       className="text-slate-600 dark:text-slate-300 dark:hover:text-slate-400 hover:text-slate-800 font-semibold block pb-2 text-sm"
                       href="https://creative-tim.com/privacy"
                       target="_blank"
+                      rel="noopener"
                     >
                       Privacy Policy
                     </a>
@@ -120,6 +125,7 @@ const MainFooter = () => {
                       className="text-slate-600 dark:text-slate-300 dark:hover:text-slate-400 hover:text-slate-800 font-semibold block pb-2 text-sm"
                       href="https://creative-tim.com/contact-us"
                       target="_blank"
+                      rel="noopener"
                     >
                       Contact Us
                     </a>

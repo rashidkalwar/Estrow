@@ -1,6 +1,7 @@
 import { Menu, Transition } from '@headlessui/react';
 import { Fragment } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { UserIcon } from '@heroicons/react/solid';
 import { LogoutIcon, DesktopComputerIcon } from '@heroicons/react/outline';
 
@@ -9,17 +10,27 @@ export default function UserDropdownMenu(props) {
   const username = props.user.displayName;
   const userImage = props.user.photoURL;
   const logout = props.logout;
+
+  const Loader = ({ src }) => {
+    return `${src}`;
+  };
+
   return (
     <div className="text-right z-20">
       <Menu as="div" className="relative inline-block text-left">
         <div>
           <Menu.Button className="inline-flex w-full justify-center items-center rounded-md bg-transparent bg-opacity-20 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
             {userImage ? (
-              <img
-                className="h-10 w-10 rounded-full hover:opacity-90"
-                src={userImage}
-                alt=""
-              />
+              <div>
+                <Image
+                  className="h-10 w-10 rounded-full hover:opacity-90"
+                  src={userImage}
+                  loader={Loader}
+                  height={40}
+                  width={40}
+                  alt="User Dropdown Menu"
+                />
+              </div>
             ) : (
               <div className="bg-white bg-opacity-60 filter backdrop-blur-sm flex justify-center items-center h-9 w-9 hover:bg-gray-500 rounded-full p-1">
                 <UserIcon className="h-7 w-7 text-sky-400" />
