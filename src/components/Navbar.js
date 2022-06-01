@@ -76,7 +76,7 @@ export default function MainNavbar() {
                 <a rel="noopener">
                   <Logo
                     className="sr-only"
-                    fill="#0c4a6e"
+                    fill="#fff"
                     height="60"
                     width="120"
                   />
@@ -96,7 +96,7 @@ export default function MainNavbar() {
               <Link href="/">
                 <a
                   rel="noopener"
-                  className="flex bg-white bg-opacity-40 hover:bg-opacity-80 transition duration-700 py-1 px-4 rounded-full text-base font-medium text-sky-600"
+                  className="flex bg-white bg-opacity-40 hover:bg-opacity-80 transition duration-500 py-1 px-4 rounded-full text-base font-medium text-white hover:text-gray-600"
                 >
                   Home
                 </a>
@@ -104,7 +104,7 @@ export default function MainNavbar() {
               <Link href="#">
                 <a
                   rel="noopener"
-                  className="flex bg-white bg-opacity-40 hover:bg-opacity-80 transition duration-700 py-1 px-4 rounded-full text-base font-medium text-sky-600"
+                  className="flex bg-white bg-opacity-40 hover:bg-opacity-80 transition duration-500 py-1 px-4 rounded-full text-base font-medium text-white hover:text-gray-600"
                 >
                   About us
                 </a>
@@ -112,7 +112,7 @@ export default function MainNavbar() {
               <Link href="#">
                 <a
                   rel="noopener"
-                  className="flex bg-white bg-opacity-40 hover:bg-opacity-80 transition duration-700 py-1 px-4 rounded-full text-base font-medium text-sky-600"
+                  className="flex bg-white bg-opacity-40 hover:bg-opacity-80 transition duration-500 py-1 px-4 rounded-full text-base font-medium text-white hover:text-gray-600"
                 >
                   Blog
                 </a>
@@ -122,15 +122,15 @@ export default function MainNavbar() {
                   <>
                     <Popover.Button
                       className={classNames(
-                        open ? 'bg-opacity-80' : 'bg-opacity-40',
-                        'group inline-flex items-center text-base bg-white bg-opacity-40 hover:bg-opacity-80 transition duration-700 py-1 px-4 rounded-full font-medium text-sky-600'
+                        open ? 'bg-opacity-80 text-gray-600' : 'bg-opacity-40',
+                        'group inline-flex items-center text-base bg-white bg-opacity-40 hover:bg-opacity-80 transition duration-200 py-1 px-4 rounded-full font-medium text-white hover:text-gray-600'
                       )}
                     >
                       <span>More</span>
                       <ChevronDownIcon
                         className={classNames(
                           open ? 'bg-opacity-80' : 'bg-opacity-40',
-                          'ml-2 h-5 w-5 group-hover:text-sky-600 '
+                          'ml-2 h-5 w-5 group-hover:text-gray-600 transition duration-200 '
                         )}
                         aria-hidden="true"
                       />
@@ -155,7 +155,7 @@ export default function MainNavbar() {
                                   className="-m-3 p-3 flex items-start rounded-lg hover:bg-opacity-80 hover:backdrop-blur-sm"
                                 >
                                   <item.icon
-                                    className="flex-shrink-0 h-6 w-6 text-sky-500"
+                                    className="flex-shrink-0 h-6 w-6 text-gray-800"
                                     aria-hidden="true"
                                   />
                                   <div className="ml-4">
@@ -185,7 +185,7 @@ export default function MainNavbar() {
                   <Link href="/login">
                     <a
                       rel="noopener"
-                      className="whitespace-nowrap bg-white bg-opacity-40 hover:bg-opacity-80 transition duration-700 py-1 px-4 rounded-full text-base font-medium text-sky-600"
+                      className="whitespace-nowrap bg-white bg-opacity-40 hover:bg-opacity-80 transition duration-500 py-1 px-4 rounded-full text-base font-medium text-white hover:text-gray-600"
                     >
                       Sign in
                     </a>
@@ -193,12 +193,12 @@ export default function MainNavbar() {
                   <Link href="/register">
                     <a
                       rel="noopener"
-                      className="ml-5 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 bg-white bg-opacity-80 hover:bg-opacity-60 transition duration-700 rounded-full text-base font-medium text-sky-600"
+                      className="ml-5 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 bg-white bg-opacity-80 hover:bg-opacity-60 transition duration-500 rounded-full text-base font-medium text-gray-600"
                     >
                       Get Started
                       <ChevronRightIcon
                         className={classNames(
-                          'text-sky-600 h-5 w-5 group-hover:text-gray-500 '
+                          'text-gray-600 h-5 w-5 group-hover:text-gray-500 '
                         )}
                         aria-hidden="true"
                       />

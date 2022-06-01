@@ -21,6 +21,7 @@
     "react-dom": "18.1.0",
     "react-firebase-hooks": "^5.0.3",
     "react-hot-toast": "^2.2.0",
+    "react-tsparticles": "1.43.1",
     "typescript": "^4.7.2"
   },
   "devDependencies": {
